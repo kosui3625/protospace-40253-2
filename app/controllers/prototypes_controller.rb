@@ -20,8 +20,8 @@ class PrototypesController < ApplicationController
     end
   end
 
-  def show
-    @comments = @prototype.comments
+  def set_prototype
+    @prototype = Prototype.find(params[:id])
   end
 
   def move_to_index
