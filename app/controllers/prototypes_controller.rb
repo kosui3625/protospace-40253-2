@@ -6,7 +6,7 @@ class PrototypesController < ApplicationController
   def index
     @prototypes = Prototype.includes(:user)
   end
-  
+
   def new
     @prototype = Prototype.new
   end
@@ -20,7 +20,9 @@ class PrototypesController < ApplicationController
     end
   end
 
-  
+  def show
+    @comments = @prototype.comments
+  end
 
   def move_to_index
     unless user_signed_in?
