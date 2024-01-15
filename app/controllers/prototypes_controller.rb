@@ -20,6 +20,13 @@ class PrototypesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+  end
+  
+
   def set_prototype
     @prototype = Prototype.find(params[:id])
   end
